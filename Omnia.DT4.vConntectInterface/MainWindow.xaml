@@ -1,0 +1,39 @@
+﻿<Window x:Class="Omnia.DT4.vConntectInterface.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Omnia.DT4.vConntectInterface"
+        mc:Ignorable="d"
+        Title="vConnect Utility" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="293*"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="Blue" BorderThickness="2,2,2,2" >
+            <TextBlock HorizontalAlignment="Center"  Text="vConnect Interface" VerticalAlignment="Top" FontSize="14" />
+        </Border>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Label Content="Source Files" VerticalAlignment="Center" ></Label>
+            <TextBlock x:Name="txtSourceFiles" Text="Source" VerticalAlignment="Center" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Label Content="Destination Files" VerticalAlignment="Center"  ></Label>
+            <TextBlock x:Name="txtDestinationFiles" Text="Destination" VerticalAlignment="Center" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+        <StatusBar Grid.Row="4" Grid.RowSpan="2">
+            <Button Content="Process"  Width="60" x:Name="btnProcess" Click="btnProcess_Click"/>
+            <Separator/>
+            <Button Content="Quit" Width="60" x:Name="btnQuit"/>
+            <Separator/>
+            <ProgressBar Width="200" Height="20"/>
+            <Separator HorizontalContentAlignment="Stretch"/>
+            <TextBlock x:Name="txtStatus" ></TextBlock>
+        </StatusBar>
+
+    </Grid>
+</Window>
